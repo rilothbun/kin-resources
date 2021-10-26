@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://kin-resources.foginforest.net"
+base_url = "https://rilothbun.github.io/kin-resources/"
 
 
 # Whether to automatically compile all Sass files in the sass directory
