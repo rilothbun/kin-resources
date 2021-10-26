@@ -1,7 +1,7 @@
 on:
   push:
     branches: 
-      - stable
+      - main
 
 name: Build and deploy on push
 jobs:
