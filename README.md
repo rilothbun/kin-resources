@@ -15,5 +15,10 @@ It's mostly a "prototype", and even though it works fine, I would like to rewrit
 	* Character creator : This should help creating characters online, with similar export functionalities as the NPC creator. You can also use the official [fillable PDF](https://victoriacorva.xyz/wp-content/uploads/2021/10/Kin_TTRPG_CharacterSheet_Fillable.pdf)
 	* Miscellaneous : I intend to put here random bits and tips.
 
+## Installation
+
+You are free to clone this and run this website on your own server, modifying it if needed.
+For that, you will need [Zola](https://www.getzola.org/).
+With a `zola build`, you can build the files needed for the website, and with `zola serve`, you can run a server, automatically refreshing the pages, mostly useful when developing the site.
 
 [^1] : There are some issues if a trait or proficiency name has spaces. But this can be fixed manually quite easily.
