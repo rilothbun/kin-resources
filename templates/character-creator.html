@@ -1,0 +1,397 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section id="character-creator-content">
+	{{ page.content | safe }}
+</section>
+
+<!--
+	<div id="test-pdf" style="border: 1px solid black">
+	<table>
+	<tr>
+	<th>Title</th>
+	<th>Number</th>
+	</tr>
+	<tr>
+	<td>Truc</td>
+	<td>42</td>
+	</tr>
+	</table>
+	</div>
+-->
+
+<section>
+	<div class="table row character-table">
+		<div class="col character-col">
+			<div class="row character-row">
+				<div class="cell character-cell">
+					Character Name
+				</div>
+			</div>
+			<div class="row character-row">
+				<div class="cell character-cell" id="character-name">
+					{{ page.extra.name }}
+				</div>
+			</div>
+			<div class="row character-row">
+				<div class="col character-col">
+					<div class="cell character-cell">
+						Level
+					</div>
+					<div class="cell character-cell" id="character-level">
+						{{ page.extra.level }}
+					</div>
+				</div>
+				<div class="col">
+					<div class="cell">
+						Unspent Proficiency Points
+					</div>
+					<div class="cell" id="character-unspent-proficiency-points">
+						{{ page.extra.unspent_proficiency_points }}
+					</div>
+				</div>
+				<div class="col">
+					<div class="cell">
+						Luck
+					</div>
+					<div class="cell" id="character-luck">
+						{{ page.extra.luck }}
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col">
+			<div class="cell flex-grow-initial">
+				Character Description
+			</div>
+			<div class="cell" id="character-description">
+				{{ page.extra.description }}
+			</div>
+		</div>
+	</div>
+
+	<br />
+
+	<div class="table row">
+		<div class="col">
+			<div class="cell">
+				Max Wound Points
+			</div>
+			<div class="cell" id="character-max-wound-points">
+				{{ page.extra.max_wound_points }}
+			</div>
+		</div>
+		<div class="col">
+			<div class="cell">
+				Defence
+			</div>
+			<div class="cell" id="character-defence">
+				{{ page.extra.defence }}
+			</div>
+		</div>
+		<div class="col">
+			<div class="cell">
+				Action Points
+			</div>
+			<div class="cell" id="character-action-points">
+				{{ page.extra.action_points }}
+			</div>
+		</div>
+		<div class="col">
+			<div class="cell">
+				Energy Points
+			</div>
+			<div class="cell" id="character-energy-points">
+				{{ page.extra.energy_points }}
+			</div>
+		</div>
+	</div>
+
+	<br />
+
+	<div class="table col">
+		<div class="cell">
+			Stats
+		</div>
+		<div class="row">
+			<div class="col">
+				<div class="cell">
+					Body
+				</div>
+				<div class="cell" id="character-body">
+					{{ page.extra.body }}
+				</div>
+			</div>
+			<div class="col">
+				<div class="cell">
+					Mind
+				</div>
+				<div class="cell" id="character-mind">
+					{{ page.extra.mind }}
+				</div>
+			</div>
+			<div class="col">
+				<div class="cell">
+					Soul
+				</div>
+				<div class="cell" id="character-soul">
+					{{ page.extra.soul }}
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<br />
+
+	<div class="table col">
+		<div class="cell">
+			Skills
+		</div>
+		<div class="row">
+			<div class="col">
+				<div class="cell">
+					Body Skills
+				</div>
+				<div class="row">
+					<div class="cell width-50">
+						Agility
+					</div>
+					<div class="cell width-50" id="character-agility">
+						{{ page.extra.agility }}
+					</div>
+				</div>
+				<div class="row">
+					<div class="cell width-50">
+						Thievery
+					</div>
+					<div class="cell width-50" id="character-thievery">
+						{{ page.extra.thievery }}
+					</div>
+				</div>
+				<div class="row">
+					<div class="cell width-50">
+						Stealth
+					</div>
+					<div class="cell width-50" id="character-stealth">
+						{{ page.extra.stealth }}
+					</div>
+				</div>
+				<div class="row">
+					<div class="cell width-50">
+						Endurance
+					</div>
+					<div class="cell width-50" id="character-endurance">
+						{{ page.extra.endurance }}
+					</div>
+				</div>
+				<div class="row">
+					<div class="cell width-50">
+						Threaten
+					</div>
+					<div class="cell width-50" id="character-threaten">
+						{{ page.extra.threaten }}
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="cell">
+					Mind Skills
+				</div>
+				<div class="row">
+					<div class="cell width-50">
+						Convince
+					</div>
+					<div class="cell width-50" id="character-convince">
+						{{ page.extra.convince }}
+					</div>
+				</div>
+				<div class="row">
+					<div class="cell width-50">
+						Alchemy
+					</div>
+					<div class="cell width-50" id="character-alchemy">
+						{{ page.extra.alchemy }}
+					</div>
+				</div>
+				<div class="row">
+					<div class="cell width-50">
+						Search
+					</div>
+					<div class="cell width-50" id="character-search">
+						{{ page.extra.search }}
+					</div>
+				</div>
+				<div class="row">
+					<div class="cell width-50">
+						Scholar
+					</div>
+					<div class="cell width-50" id="character-scholar">
+						{{ page.extra.scholar }}
+					</div>
+				</div>
+				<div class="row">
+					<div class="cell width-50">
+						Nature
+					</div>
+					<div class="cell width-50" id="character-nature">
+						{{ page.extra.nature }}
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="cell">
+					Soul Skills
+				</div>
+				<div class="row">
+					<div class="cell width-50">
+						Liar
+					</div>
+					<div class="cell width-50" id="character-liar">
+						{{ page.extra.liar }}
+					</div>
+				</div>
+				<div class="row">
+					<div class="cell width-50">
+						Wild Empathy
+					</div>
+					<div class="cell width-50" id="character-wild-empathy">
+						{{ page.extra.wild_empathy }}
+					</div>
+				</div>
+				<div class="row">
+					<div class="cell width-50">
+						Social Instinct
+					</div>
+					<div class="cell width-50" id="character-social-instinct">
+						{{ page.extra.social_instinct }}
+					</div>
+				</div>
+				<div class="row">
+					<div class="cell width-50">
+						Perform
+					</div>
+					<div class="cell width-50" id="character-perform">
+						{{ page.extra.perform }}
+					</div>
+				</div>
+				<div class="row">
+					<div class="cell width-50">
+						Create
+					</div>
+					<div class="cell width-50" id="character-create">
+						{{ page.extra.create }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section>
+	<div id="user-input">
+		<form>
+			<div>
+				<label for="input-character-name">Name :</label>
+				<input type="text" id="input-character-name">
+
+				<label for="input-character-level">Level :</label>
+				<input type="number" id="input-character-level">
+
+				<label for="input-character-unspent-proficiency-points">Unspent Proficiency Points :</label>
+				<input type="number" id="input-character-unspent-proficiency-points">
+
+				<label for="input-character-luck">Luck :</label>
+				<input type="number" id="input-character-luck">
+
+				<label for="input-character-description">Description :</label>
+				<textarea rows="5" cols="20" id="input-character-description">Description</textarea>
+			</div>
+
+			<div>
+				<label for="input-character-max-wound-points">Max Wound Points :</label>
+				<input type="text" id="input-character-max-wound-points">
+
+				<label for="input-character-defence">Defence :</label>
+				<input type="number" id="input-character-defence">
+
+				<label for="input-character-action-points">Action Points :</label>
+				<input type="text" id="input-character-action-points">
+
+				<label for="input-character-energy-points">Energy Points :</label>
+				<input type="text" id="input-character-energy-points">
+			</div>
+
+			<div>
+				<label for="input-character-body">Body :</label>
+				<input type="number" id="input-character-body">
+
+				<label for="input-character-mind">Mind :</label>
+				<input type="number" id="input-character-mind">
+
+				<label for="input-character-soul">Soul :</label>
+				<input type="number" id="input-character-soul">
+			</div>
+
+			<div>
+				<div>
+					<label for="input-character-agility">Agility :</label>
+					<input type="number" id="input-character-agility">
+
+					<label for="input-character-thievery">Thievery :</label>
+					<input type="number" id="input-character-thievery">
+
+					<label for="input-character-stealth">Stealth :</label>
+					<input type="number" id="input-character-stealth">
+
+					<label for="input-character-endurance">Endurance :</label>
+					<input type="number" id="input-character-endurance">
+
+					<label for="input-character-threaten">Threaten :</label>
+					<input type="number" id="input-character-threaten">
+				</div>
+				<div>
+					<label for="input-character-convince">Convince :</label>
+					<input type="number" id="input-character-convince">
+
+					<label for="input-character-alchemy">Alchemy :</label>
+					<input type="number" id="input-character-alchemy">
+
+					<label for="input-character-search">Search :</label>
+					<input type="number" id="input-character-search">
+
+					<label for="input-character-scholar">Scholar :</label>
+					<input type="number" id="input-character-scholar">
+
+					<label for="input-character-nature">Nature :</label>
+					<input type="number" id="input-character-nature">
+				</div>
+				<div>
+					<label for="input-character-liar">Liar :</label>
+					<input type="number" id="input-character-liar">
+
+					<label for="input-character-wild-empathy">Wild Empathy :</label>
+					<input type="number" id="input-character-wild-empathy">
+
+					<label for="input-character-social-instinct">Social Instinct :</label>
+					<input type="number" id="input-character-social-instinct">
+
+					<label for="input-character-perform">Perform :</label>
+					<input type="number" id="input-character-perform">
+
+					<label for="input-character-create">Create :</label>
+					<input type="number" id="input-character-create">
+				</div>
+			</div>
+
+			<div>
+				<!--			<input type="button" id="export-pdf" value="Export to PDF" onclick="pdfButtonClicked()"> -->
+				<input type="button" id="export-md" value="Export to Markdown (for Zola)" onclick="mdButtonClicked()">
+			</div>
+		</form>
+		<div>
+		</div>
+	</div>
+</section>
+{% endblock content %}

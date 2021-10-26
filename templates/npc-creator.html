@@ -1,0 +1,178 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section id="npc-creator-content">
+	{{ page.content | safe }}
+</section>
+
+	<!--
+	<div id="test-pdf" style="border: 1px solid black">
+		<table>
+			<tr>
+				<th>Title</th>
+				<th>Number</th>
+			</tr>
+			<tr>
+				<td>Truc</td>
+				<td>42</td>
+			</tr>
+		</table>
+	</div>
+	-->
+
+<section>
+	<div class="table col npc-table" id="npc-table">
+		<div class="row npc-row">
+			<div class="cell npc-cell npc-name">
+				<h1 id="npc-name">Name</h1>
+			</div>
+		</div>
+		<div class="row npc-row">
+			<div class="col npc-col">
+				<div class="cell npc-cell npc-header">
+					Body
+				</div>
+				<div class="cell npc-cell" id="npc-body">
+					-
+				</div>
+			</div>
+			<div class="col npc-col">
+				<div class="cell npc-cell npc-header">
+					Mind
+				</div>
+				<div class="cell npc-cell" id="npc-mind">
+					-
+				</div>
+			</div>
+			<div class="col npc-col">
+				<div class="cell npc-cell npc-header">
+					Soul
+				</div>
+				<div class="cell npc-cell" id="npc-soul">
+					-
+				</div>
+			</div>
+		</div>
+
+		<div class="row npc-row">
+			<div class="col npc-col">
+				<div class="cell npc-cell npc-header">
+					Maximum Wound Points
+				</div>
+				<div class="cell npc-cell" id="npc-maximum_wound_points">
+					O
+				</div>
+			</div>
+			<div class="col npc-col">
+				<div class="cell npc-cell npc-header">
+					Resistances
+				</div>
+				<div class="cell npc-cell" id="npc-resistances">
+					-
+				</div>
+			</div>
+			<div class="col npc-col">
+				<div class="cell npc-cell npc-header">
+					Defence
+				</div>
+				<div class="cell npc-cell" id="npc-defence">
+					-
+				</div>
+			</div>
+			<div class="col npc-col">
+				<div class="cell npc-cell npc-header">
+					Planar Origin
+				</div>
+				<div class="cell npc-cell" id="npc-planar_origin">
+					-
+				</div>
+			</div>
+		</div>
+		<div class="row npc-row">
+			<div class="cell npc-cell npc-header">
+				Description
+			</div>
+		</div>
+		<div class="row npc-row">
+			<div class="cell npc-cell" id="npc-description">
+				-
+			</div>
+		</div>
+		<div class="row npc-row">
+			<div class="cell npc-cell npc-header">
+				Traits and Proficiencies
+			</div>
+		</div>
+		<div class="row npc-row">
+			<div class="cell npc-cell" id="npc-traits_and_proficiencies">
+				<ul>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section>
+	<div id="user-input">
+		<form>
+			<div>
+				<label for="user-name">Name :</label>
+				<input type="text" id="user-name">
+			</div>
+			<div>
+				<div>
+					<label for="user-body">Body :</label>
+					<input type="text" id="user-body">
+				</div>
+				<div>
+					<label for="user-mind">Mind :</label>
+					<input type="text" id="user-mind">
+				</div>
+				<div>
+					<label for="user-soul">Soul :</label>
+					<input type="text" id="user-soul">
+				</div>
+			</div>
+			<div>
+				<div>
+					<label for="user-maximum_wound_points">Maximum Wound Points :</label>
+					<input type="text" id="user-maximum_wound_points">
+				</div>
+				<div>
+					<label for="user-Resistances">Resistances :</label>
+					<input type="text" id="user-resistances">
+				</div>
+				<div>
+					<label for="user-defence">Defence :</label>
+					<input type="text" id="user-defence">
+				</div>
+				<div>
+					<label for="user-planar_origin">Planar Origin :</label>
+					<input type="text" id="user-planar_origin">
+				</div>
+			</div>
+			<div>
+				<label for="user-description">Description :</label>
+				<textarea id="user-description" rows="5" cols="42"></textarea>
+			</div>
+			<div class="tnp-input-section">
+				<h3>Traits and Proficiencies</h3>
+				<label for="user-traits_and_proficiencies-nbr">Number of traits and proficiencies :</label>
+				<input type="number" id="user-traits_and_proficiencies-nbr">
+				<p>
+				First input is for the name, second for the description
+				</p>
+				<ul id="list-tnp">
+				</ul>
+			</div>
+			<div>
+				<!--			<input type="button" id="export-pdf" value="Export to PDF" onclick="pdfButtonClicked()"> -->
+				<input type="button" id="export-md" value="Export to Markdown (for Zola)" onclick="mdButtonClicked()">
+			</div>
+		</form>
+		<div>
+		</div>
+	</div>
+</section>
+{% endblock content %}

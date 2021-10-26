@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section>
+
+<div class="table npc-table">
+	<div class="row npc-row">
+		<div class="cell npc-cell npc-name">
+			<h1 id="npc-name">{{ page.title }}</h1>
+		</div>
+	</div>
+	<div class="row npc-row">
+		<div class="col npc-col">
+			<div class="cell npc-cell npc-header">
+				Body
+			</div>
+			<div class="cell npc-cell" id="npc-body">
+				{{ page.extra.body }}
+			</div>
+		</div>
+		<div class="col npc-col">
+			<div class="cell npc-cell npc-header">
+				Mind
+			</div>
+			<div class="cell npc-cell" id="npc-mind">
+				{{ page.extra.mind }}
+			</div>
+		</div>
+		<div class="col npc-col">
+			<div class="cell npc-cell npc-header">
+				Soul
+			</div>
+			<div class="cell npc-cell" id="npc-soul">
+				{{ page.extra.soul }}
+			</div>
+		</div>
+	</div>
+
+	<div class="row npc-row">
+		<div class="col npc-col">
+			<div class="cell npc-cell npc-header">
+				Maximum Wound Points
+			</div>
+			<div class="cell npc-cell" id="npc-maximum_wound_points">
+				{{ page.extra.maximum_wound_points }}
+			</div>
+		</div>
+		<div class="col npc-col">
+			<div class="cell npc-cell npc-header">
+				Resistances
+			</div>
+			<div class="cell npc-cell" id="npc-resistances">
+				{{ page.extra.resistances }}
+			</div>
+		</div>
+		<div class="col npc-col">
+			<div class="cell npc-cell npc-header">
+				Defence
+			</div>
+			<div class="cell npc-cell" id="npc-defence">
+				{{ page.extra.defence }}
+			</div>
+		</div>
+		<div class="col npc-col">
+			<div class="cell npc-cell npc-header">
+				Planar Origin
+			</div>
+			<div class="cell npc-cell" id="npc-planar_origin">
+				{{ page.extra.planar_origin }}
+			</div>
+		</div>
+	</div>
+	<div class="row npc-row">
+			<div class="cell npc-cell npc-header">
+		Description
+			</div>
+	</div>
+	<div class="row npc-row">
+			<div class="cell npc-cell" id="npc-description">
+		{{ page.extra.description }}
+			</div>
+	</div>
+	<div class="row npc-row">
+			<div class="cell npc-cell npc-header">
+		Traits and Proficiencies
+			</div>
+	</div>
+	<div class="row npc-row">
+			<div class="cell npc-cell" id="npc-traits_and_proficiencies">
+		<ul>
+			{% for tnpk, tnpd in page.extra.traits_proficiencies %}
+			<li><strong>{{ tnpk }}:</strong> {{ tnpd | safe }}</li>
+			{% endfor %}
+		</ul>
+			</div>
+	</div>
+</div>
+
+<div>
+	<!--			<input type="button" id="export-pdf" value="Export to PDF" onclick="pdfButtonClicked()"> -->
+	<input type="button" id="export-md" value="Export to Markdown (for Zola)" onclick="mdButtonClicked()">
+</div>
+
+</section>
+{% endblock content %}
