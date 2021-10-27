@@ -1,0 +1,142 @@
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="https:&#x2F;&#x2F;rilothbun.github.io&#x2F;kin-resources/style.css">
+		<link rel="stylesheet" href="https:&#x2F;&#x2F;rilothbun.github.io&#x2F;kin-resources/style-print.css" media="print">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
+		<script src="https:&#x2F;&#x2F;rilothbun.github.io&#x2F;kin-resources/scripts/html2canvas.min.js"></script>
+		<script src="https:&#x2F;&#x2F;rilothbun.github.io&#x2F;kin-resources/scripts/npc-creator.js"></script>
+	</head>
+	<body>
+		<header>
+			<nav>
+	<ul>
+		<li><a href="https:&#x2F;&#x2F;rilothbun.github.io&#x2F;kin-resources/">Home</a></li>
+		<li><a href="https:&#x2F;&#x2F;rilothbun.github.io&#x2F;kin-resources/npcs/">NPCs</a></li>
+		<li><a href="https:&#x2F;&#x2F;rilothbun.github.io&#x2F;kin-resources/characters/">Characters</a></li>
+		<li><a href="https:&#x2F;&#x2F;rilothbun.github.io&#x2F;kin-resources/miscellaneous/">Miscellaneous</a></li>
+		<li><a href="https:&#x2F;&#x2F;rilothbun.github.io&#x2F;kin-resources/about/">About</a></li>
+	</ul>
+</nav>
+
+		</header>
+
+		<div id="content">
+			
+
+<section>
+
+<div class="table npc-table">
+	<div class="row npc-row">
+		<div class="cell npc-cell npc-name">
+			<h1 id="npc-name">Bytithlor</h1>
+		</div>
+	</div>
+	<div class="row npc-row">
+		<div class="col npc-col">
+			<div class="cell npc-cell npc-header">
+				Body
+			</div>
+			<div class="cell npc-cell" id="npc-body">
+				2
+			</div>
+		</div>
+		<div class="col npc-col">
+			<div class="cell npc-cell npc-header">
+				Mind
+			</div>
+			<div class="cell npc-cell" id="npc-mind">
+				3
+			</div>
+		</div>
+		<div class="col npc-col">
+			<div class="cell npc-cell npc-header">
+				Soul
+			</div>
+			<div class="cell npc-cell" id="npc-soul">
+				4
+			</div>
+		</div>
+	</div>
+
+	<div class="row npc-row">
+		<div class="col npc-col">
+			<div class="cell npc-cell npc-header">
+				Maximum Wound Points
+			</div>
+			<div class="cell npc-cell" id="npc-maximum_wound_points">
+				1
+			</div>
+		</div>
+		<div class="col npc-col">
+			<div class="cell npc-cell npc-header">
+				Resistances
+			</div>
+			<div class="cell npc-cell" id="npc-resistances">
+				-
+			</div>
+		</div>
+		<div class="col npc-col">
+			<div class="cell npc-cell npc-header">
+				Defence
+			</div>
+			<div class="cell npc-cell" id="npc-defence">
+				10
+			</div>
+		</div>
+		<div class="col npc-col">
+			<div class="cell npc-cell npc-header">
+				Planar Origin
+			</div>
+			<div class="cell npc-cell" id="npc-planar_origin">
+				Astralar
+			</div>
+		</div>
+	</div>
+	<div class="row npc-row">
+			<div class="cell npc-cell npc-header">
+		Description
+			</div>
+	</div>
+	<div class="row npc-row">
+			<div class="cell npc-cell" id="npc-description">
+		Astralkin man with sparkling skin and a glowing aura.
+			</div>
+	</div>
+	<div class="row npc-row">
+			<div class="cell npc-cell npc-header">
+		Traits and Proficiencies
+			</div>
+	</div>
+	<div class="row npc-row">
+			<div class="cell npc-cell" id="npc-traits_and_proficiencies">
+		<ul>
+			
+			<li><strong>Shining_Aura:</strong> You are able to create or brighten light in your immediate vicinity. This could be an extension of a bright aura around you or be from another source. You can use this to obscure yourself. Your aura does not affect your vision when used in this way but does affect others, who have a -2 to attacks against you while the effect is active.<br />Range: Close (on self)<br />EP per round: 1 (when used to obscure, 0 when not)<br />AP per use: 1<br />Trait Point Cost: 1</li>
+			
+			<li><strong>Charm_Mind:</strong> </li>
+			
+		</ul>
+			</div>
+	</div>
+</div>
+
+<div>
+	<!--			<input type="button" id="export-pdf" value="Export to PDF" onclick="pdfButtonClicked()"> -->
+	<input type="button" id="export-md" value="Export to Markdown (for Zola)" onclick="mdButtonClicked()">
+</div>
+
+</section>
+
+		</div>
+
+		<footer>
+	<ul>
+		<li><a href="https://github.com/rilothbun/kin-resources">Source Code</a></li>
+	</ul>
+</footer>
+
+	</body>
+</html>
+

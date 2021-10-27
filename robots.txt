@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://rilothbun.github.io/kin-resources/sitemap.xml
