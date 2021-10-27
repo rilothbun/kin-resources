@@ -47,4 +47,5 @@ miscellaneous = ""
 [extra.inventory]
 +++
 
+This is a tool to help you create a character sheet. You can also use the official [fillable PDF](https://victoriacorva.xyz/wp-content/uploads/2021/10/Kin_TTRPG_CharacterSheet_Fillable.pdf).
 🚧 This page is still under construction ! 🚧
